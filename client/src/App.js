@@ -1,9 +1,10 @@
 import './App.css';
 import {Route , BrowserRouter, Routes} from 'react-router-dom'
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
-import BookingCar from './Pages/BookingCar';
+import Home from './Pages/Home'
+import Login from './Pages/Login'
+import Register from './Pages/Register'
+import BookingCar from './Pages/BookingCar'
+import 'antd/dist/reset.css';
 
 function App() {
   return (
