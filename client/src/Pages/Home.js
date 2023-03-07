@@ -22,17 +22,24 @@ function Home() {
             <Row>
                 {cars.map(car=>{
                     return <Col lg={5} sm={24} xs={24}>
-                        <div>
-                            <h3>{car.name}</h3>
-                            <p> Rent Per Hour {car.rentPerHour} /-</p>
+                    <div className="car p-2 bs1">
+                       <img src={car.image} className="carimg"/>
+
+                       <div className="car-content d-flex align-items-center justify-content-between">
+
+                            <div className='text-left pl-2'>
+                                <p>{car.name}</p>
+                                <p> Rent Per Hour {car.rentPerHour} /-</p>
+                            </div>
+
+                            <div>
+                                <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
+                            </div>
                         </div>
-                    </Col>
-                })}
+                    </div>
+               </Col>
+            })}
             </Row>
-            
-            
-            
-            
         </DefaultLayout>
     )
 }
